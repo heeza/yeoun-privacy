@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yeoun Privacy Policy</title><style>body{font-family:sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;line-height:1.7}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:4px 8px}</style></head><body><h1>Yeoun Privacy Policy</h1>
+<p>Effective: November 20, 2026 (draft written 2026-11-11)</p>
+<p>Operator: Yeoun developer (hyuns) · Contact: cosmos6464@gmail.com</p>
+<p>Yeoun (&quot;the app&quot;) is a personal journaling app that brings your past thoughts back to you. This policy states exactly what the app keeps, where, and when anything leaves your phone.</p>
+<h2>1. Summary</h2>
+<ul>
+<li>No sign-up or login. The developer runs no server and never receives or stores what you write.</li>
+<li>Your notes are stored only on this phone, in the app&#x27;s private storage.</li>
+<li>Your writing leaves the phone in one case only: when you connect Gemini yourself and tap the Gemini question button.</li>
+</ul>
+<h2>2. Data stored only on your phone</h2>
+<table>
+<tr><th>Data</th><th>Details</th><th>Where</th></tr>
+<tr><td>Notes</td><td>Text, speech-to-text results, book quotes and their source, timestamps</td><td>App-private database (Room, yeoun.db)</td></tr>
+<tr><td>Daily card</td><td>IDs of the two notes shown, the question, your reaction, the ID of your answer note</td><td>Same database</td></tr>
+<tr><td>Settings</td><td>Scene, calm sound, reminder time window, hidden notes</td><td>App-private SharedPreferences</td></tr>
+<tr><td>Gemini API key (optional)</td><td>The key you paste in</td><td>App-private SharedPreferences</td></tr>
+<tr><td>AI model files (optional)</td><td>Small AI (~0.34 GB) / Deep AI (~2.6 GB), only if you download them</td><td>App-private storage</td></tr>
+</table>
+<p>Auto backup is disabled (allowBackup=false). Uninstalling the app deletes all of the above. You can delete individual notes in the app and delete the Deep AI file in Settings.</p>
+<h2>3. When data leaves your phone</h2>
+<h3>3-1. Gemini questions (optional, off by default)</h3>
+<p>Only after you connect your own Google AI Studio API key. Each time you tap the Gemini button, the first 500 characters of your current draft plus a fixed instruction are sent over HTTPS to Google&#x27;s Gemini API (generativelanguage.googleapis.com). This happens under your own relationship with Google; the developer does not receive it. Google handles it under the Gemini API Terms (https://ai.google.dev/gemini-api/terms) and Google Privacy Policy (https://policies.google.com/privacy). Google&#x27;s servers may be outside Korea. A one-line test prompt is sent once when you connect, to verify the key. While the Gemini connect dialog is open and you return from AI Studio, the app checks the clipboard for text shaped like an API key (AIza…) to fill it in; it does not read the clipboard otherwise.</p>
+<h3>3-2. Downloading AI models (optional)</h3>
+<p>The small AI (Qwen3-0.6B) and deep AI (Gemma 4 E2B) are downloaded from Hugging Face (huggingface.co) only after you agree and tap Download. Only the file request is sent, never your notes; Hugging Face may log connection data such as your IP address. Models then run entirely on your phone.</p>
+<h3>3-3. Gemini Nano (on-device)</h3>
+<p>On supported phones, questions can be generated on-device through Google ML Kit GenAI (Gemini Nano via AICore). Your writing stays on the device. The ML Kit SDK may send Google diagnostic data such as device and app information, per-installation identifiers, performance metrics, error codes and configured languages (https://developers.google.com/ml-kit/android-data-disclosure). It does not include your notes.</p>
+<h3>3-4. Voice input</h3>
+<p>The Voice tab opens your phone&#x27;s speech recognition app. Yeoun receives only the recognized text and never receives or stores audio. Speech processing follows that app&#x27;s privacy policy.</p>
+<h2>4. What we do not collect</h2>
+<p>No advertising ID, location, contacts, photos, account or payment data. No ads, analytics or crash-reporting SDKs.</p>
+<h2>5. Permissions</h2>
+<p>Notifications (optional; asked only when you turn on writing invitations in Settings), Internet (for the optional features above), Receive boot completed and Vibrate (to re-arm reminders after reboot and for haptic feedback). No microphone, storage, location or camera permission.</p>
+<h2>6. Retention</h2>
+<p>Notes stay on your phone until you delete them or uninstall the app. The developer holds no personal data. Support emails are deleted within one year after we reply.</p>
+<h2>7. Children</h2>
+<p>The app is intended for adults (18+) and is not directed to children. The Gemini connection follows Google AI Studio&#x27;s age requirement (18+).</p>
+<h2>8. Your rights and contact</h2>
+<p>You can view, edit and delete your notes in the app at any time. Questions: cosmos6464@gmail.com.</p>
+<h2>9. Changes</h2>
+<p>We will post changes on this page and mention them in app updates.</p><hr><p><a href="index.html">한국어</a></p></body></html>
